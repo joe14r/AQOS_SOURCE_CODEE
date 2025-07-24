@@ -129,7 +129,7 @@ class TableManager extends Component
         $this->viewTable = Table::findOrFail($id);
         $url = config('app.url').'/menu-table/'.$this->viewTable->tid;
         $qrCode = QrCode::size(300)->generate($url);
-        $this->qrcode= 'data:image/png;base64,' . base64_encode($qrCode);
+        $this->qrcode= 'data:image/svg+xml;base64,' . base64_encode($qrCode);
 
          // Fetch the table details
     }

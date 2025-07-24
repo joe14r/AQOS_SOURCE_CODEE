@@ -4,8 +4,9 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Order;
-// use App\Events\OrderPlaced;
+use App\Events\OrderPlaced;
 use App\Jobs\BroadcastOrderPlaced;
+use Illuminate\Support\Facades\Log;
 
 class CheckoutPage extends Component
 {
@@ -69,11 +70,11 @@ class CheckoutPage extends Component
             try {
                     // Broadcasting logic
                     //event(new OrderPlaced($order));
-                    dispatch(new BroadcastOrderPlaced($order));
+                    event(new OrderPlaced($order));
                 } catch (\Exception $e) {
                     Log::error('Error event OrderPlaced event', [
                         'error' => $e->getMessage(),
-                        'order_id' => $this->order->id,
+                        'order_id' => $order->id,
                     ]);
                 }
 

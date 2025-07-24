@@ -7,55 +7,49 @@
     <title>{{ config('app.name', 'Dashboard - Al Madinah Restaurant') }}</title>
     <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="{{ asset('build/assets/app-wO4EqYCH.css') }}" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+<style>
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
 
-      <!-- <script src="https://js.pusher.com/8.4.0/pusher.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/laravel-echo@1.10.0/dist/echo.iife.js"></script> -->
-<!-- <script>
-    // Enable Pusher logging (useful for debugging)
-    Pusher.logToConsole = true;
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
-    // Initialize Pusher with your app key and cluster
-    var pusher = new Pusher('d5e2ae068b90ed02ac54', {
-        cluster: 'ap2'
-    });
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
 
-    // Initialize Echo
-    var echo = new Echo({
-        broadcaster: 'pusher',
-        key: 'd5e2ae068b90ed02ac54',
-        cluster: 'ap2',
-        encrypted: true
-    });
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
 
-    // Subscribe to the 'order-channel'
-    echo.channel('order-channel')
-        .listen('order-event', function(data) {
-            // Display the data from the event
-            console.log(data);
-            alert("New Order: " + JSON.stringify(data));
-        });
-</script> -->
-
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
     @livewireStyles
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
-      <script>
-
-    // Enable pusher logging - don't include this in production
-    // Pusher.logToConsole = true;
-
-    // var pusher = new Pusher('d5e2ae068b90ed02ac54', {
-    //   cluster: 'ap2'
-    // });
-
-    // var channel = pusher.subscribe('orders');
-    // channel.bind('order.placed', function(data) {
-    //   alert(JSON.stringify(data));
-    // });
-  </script>
-
-
 
 </head>
 
@@ -70,13 +64,34 @@
             {{ $slot }}
         </main>
     </div>
-@livewireScripts
-@yield('script')
-<script>
-    console.log("Blade loaded!");
-</script>
 
-    <!-- <script src="{{ asset('/assets/js/script.js')}}"></script> -->
+    @livewireScripts
+    @yield('script')
+    @stack('scripts')
+
+    <script>
+        // console.log("Blade loaded!");
+    </script>
+
+    <!-- Move the Echo script here, so it runs after app.js is loaded -->
+    <script>
+//      window.onload = function () {
+//         console.log("Echo connection state:", Echo.connector.pusher.connection.state);
+//     Echo.channel('order-channel')
+//         .listen('order.event', (event) => {
+//             console.log("Event received:", event);
+//             alert("Order ID: " + event.order_id);
+//         })
+//         .error((err) => {
+//             console.error("Error subscribing to Echo channel:", err);
+//         });
+
+//     // Log Pusher connection status for debugging
+//     Echo.connector.pusher.connection.bind('state_change', function (states) {
+//         console.log('Pusher connection state:', states.current);
+//     });
+// };
+</script>
 </body>
 
 </html>

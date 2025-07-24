@@ -1,5 +1,7 @@
 <div class="order-details p-6">
-    <h2 class="text-2xl font-semibold mb-4">Order Details</h2>
+    <h2 class="text-2xl font-semibold mb-4">Order Details
+        <a href="{{ route('admin.order.print', $order->id) }}" target="_blank">Print</a>
+    </h2>
 
     {{-- Order Info --}}
     <div class="mb-6 bg-gray-100 p-4 rounded shadow-sm">
@@ -13,7 +15,7 @@
         <p><strong>Total Price:</strong> RM {{ number_format($order->total, 2) }}</p>
         <p><strong>Order Date:</strong> {{ $order->created_at->format('d M Y, h:i A') }}</p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-12 mt-30">
         <h3>Order Status</h3>
         <button type="button" class="btn {{ $order->status == 'new' ? 'btn-primary' : 'btn-light' }}" >New</button>
         <button type="button" class="btn {{ $order->status == 'preparing' ? 'btn-primary' : 'btn-light' }}" wire:click="changeStatus('preparing', {{ $order->id }})">Preparing</button>
@@ -23,10 +25,10 @@
         <button type="button" class="btn {{ $order->status == 'sufed' ? 'btn-primary' : 'btn-light' }}" wire:click="changeStatus('sufed', {{ $order->id }})">Sufed</button>
 
         <button type="button" class="btn {{ $order->status == 'cancel' ? 'btn-primary' : 'btn-light' }}" wire:click="changeStatus('cancel', {{ $order->id }})">cancel</button>
+</div>
+<div class="col-md-12 mt-30 mb-30">
 
-
-
-        <h3>Order Status</h3>
+        <h3>Payment Status</h3>
         <button type="button" class="btn {{ $order->paymentStatus == 'pending' ? 'btn-success' : 'btn-light' }}">Pending</button>
 
         <button type="button" class="btn {{ $order->paymentStatus == 'paid' ? 'btn-success' : 'btn-light' }}" wire:click="changePaymentStatus('paid', {{ $order->id }})">Paid</button>

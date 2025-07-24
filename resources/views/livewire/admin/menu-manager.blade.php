@@ -1,71 +1,68 @@
-<div>
+<div class="modern-admin-menu-manager">
     <!-- Flash message -->
     @if (session()->has('message'))
-        <div class="alert alert-success">
+        <div class="modern-admin-alert-success">
             {{ session('message') }}
         </div>
     @endif
 
     <!-- Add/Edit Form -->
-    <div class="card">
-        <div class="card-header">
-            @if($isEditing)
-                <h4>Edit Menu Item</h4>
-            @else
-                <h4>Add Menu Item</h4>
-            @endif
+    <div class="modern-admin-menu-card modern-admin-menu-card-modern">
+        <div class="modern-admin-menu-card-header">
+            <h3><i class="fas fa-utensils"></i> {{ $isEditing ? 'Edit Menu Item' : 'Add Menu Item' }}</h3>
         </div>
-        <div class="card-body">
-            <form wire:submit.prevent="{{ $isEditing ? 'update' : 'store' }}">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" wire:model="name" id="name" class="form-control" placeholder="Menu Name">
-                    @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+        <div class="modern-admin-menu-card-body">
+            <form wire:submit.prevent="{{ $isEditing ? 'update' : 'store' }}" enctype="multipart/form-data" class="modern-admin-menu-form-modern">
+                <div class="modern-admin-menu-form-row">
+                    <div class="modern-admin-menu-form-group">
+                        <label for="name">Name</label>
+                        <input type="text" wire:model="name" id="name" class="modern-admin-menu-input-modern" placeholder="Menu Name">
+                        @error('name') <span class="modern-admin-menu-error">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="modern-admin-menu-form-group">
+                        <label for="price">Price</label>
+                        <input type="number" wire:model="price" id="price" class="modern-admin-menu-input-modern" placeholder="Price" step="0.01">
+                        @error('price') <span class="modern-admin-menu-error">{{ $message }}</span> @enderror
+                    </div>
                 </div>
-
-                <div class="form-group">
+                <div class="modern-admin-menu-form-group">
                     <label for="description">Description</label>
-                    <textarea wire:model="description" id="description" class="form-control" placeholder="Description"></textarea>
-                    @error('description') <span class="text-danger">{{ $message }}</span> @enderror
+                    <textarea wire:model="description" id="description" class="modern-admin-menu-input-modern" placeholder="Description"></textarea>
+                    @error('description') <span class="modern-admin-menu-error">{{ $message }}</span> @enderror
                 </div>
-
-                <div class="form-group">
-                    <label for="price">Price</label>
-                    <input type="number" wire:model="price" id="price" class="form-control" placeholder="Price" step="0.01">
-                    @error('price') <span class="text-danger">{{ $message }}</span> @enderror
+                <div class="modern-admin-menu-form-row">
+                    <div class="modern-admin-menu-form-group">
+                        <label for="image">Image</label>
+                        <input type="file" wire:model="image" id="image" class="modern-admin-menu-input-file-modern">
+                        @error('image') <span class="modern-admin-menu-error">{{ $message }}</span> @enderror
+                        @if ($image)
+                            <img src="{{ $image->temporaryUrl() }}" class="modern-admin-menu-img-preview-modern" alt="Image preview">
+                        @endif
+                    </div>
+                    <div class="modern-admin-menu-form-group">
+                        <label for="status">Status</label>
+                        <select wire:model="status" id="status" class="modern-admin-menu-input-modern">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                        @error('status') <span class="modern-admin-menu-error">{{ $message }}</span> @enderror
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="image">Image</label>
-                    <input type="file" wire:model="image" id="image" class="form-control">
-                    @error('image') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-
-                <div class="form-group">
-                    <label for="status">Status</label>
-                    <select wire:model="status" id="status" class="form-control">
-                        <option value="active">Active</option>
-                        <option value="inactive">Inactive</option>
-                    </select>
-                    @error('status') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                    {{ $isEditing ? 'Update Menu Item' : 'Add Menu Item' }}
+                <button type="submit" class="modern-btn modern-admin-menu-btn-modern">
+                    <i class="fas {{ $isEditing ? 'fa-save' : 'fa-plus' }}"></i> {{ $isEditing ? 'Update Menu Item' : 'Add Menu Item' }}
                 </button>
             </form>
         </div>
     </div>
 
     <!-- Menu List -->
-    <div class="mt-4">
-        <h4>Menu Items</h4>
-        <table class="table table-bordered">
+    <div class="modern-admin-menu-list">
+        <h3 class="modern-admin-menu-list-title"><i class="fas fa-list"></i> Menu Items</h3>
+        <table class="modern-admin-menu-table">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <!-- <th>Description</th> -->
                     <th>Price</th>
                     <th>Status</th>
                     <th>Actions</th>
@@ -76,27 +73,23 @@
                     <tr>
                         <td>{{ $menu->id }}</td>
                         <td>{{ $menu->name }}</td>
-                        <!-- <td>{{ $menu->description }}</td> -->
                         <td>{{ $menu->price }}</td>
                         <td>{{ $menu->status ? 'Active' : 'Inactive' }}</td>
                         <td>
-                            <button wire:click="edit({{ $menu->id }})" class="btn btn-warning btn-sm">Edit</button>
-                            <button onclick="confirmDelete({{ $menu->id }})" class="btn btn-danger btn-sm">Delete</button>
+                            <button wire:click="edit({{ $menu->id }})" class="modern-admin-menu-action-btn-modern modern-admin-menu-edit-modern" title="Edit"><i class="fas fa-pen"></i></button>
+                            <button onclick="confirmDelete({{ $menu->id }})" class="modern-admin-menu-action-btn-modern modern-admin-menu-delete-modern" title="Delete"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-
-        <!-- Pagination -->
-        <div>
+        <div class="modern-admin-menu-pagination">
             {{ $menuItems->links() }}
         </div>
     </div>
     <script>
         function confirmDelete(menuId) {
             if (confirm("Are you sure you want to delete this menu item?")) {
-                // If user confirms, trigger Livewire delete method
                 @this.call('delete', menuId);
             }
         }

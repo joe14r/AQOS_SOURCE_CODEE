@@ -5,8 +5,16 @@ console.log("bootstrap loaded >>>>>>>>>>>>>>>>>");
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-import Echo from "laravel-echo";
-import Pusher from "pusher-js";
+// import Echo from 'laravel-echo';
+// import Pusher from 'pusher-js';
+
+// window.Pusher = Pusher;
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: "d5e2ae068b90ed02ac54",
+//     cluster: "ap2",
+//     encrypted: true
+// });
 // import axios from 'axios';
 // window.axios = axios;
 

@@ -31,7 +31,7 @@ class OrderPlaced implements ShouldBroadcast
         }
     public function broadcastOn()
         {
-            return new Channel('order-channel');
+            return new PrivateChannel('order-channel');
         }
 
     // public function broadcastOn()
@@ -41,6 +41,6 @@ class OrderPlaced implements ShouldBroadcast
 
     public function broadcastAs()
     {
-        return 'order-event';
+        return 'order.event';
     }
 }

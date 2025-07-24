@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
@@ -10,6 +11,7 @@ class Order extends Model
 
     protected $fillable = [
         'table_id',
+        'unique_id',
         'name',
         'phone',
         'paymentMethod',
@@ -17,6 +19,16 @@ class Order extends Model
         'total',
         'status'
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($order) {
+            // Generate a unique ID before saving
+            $order->unique_id = (string) Str::uuid();
+        });
+    }
 
     public function items(): HasMany
     {

@@ -132,6 +132,13 @@ class MenuManager extends Component
         session()->flash('message', 'Menu item deleted successfully.');
     }
 
+    // public function updatedImage()
+    //     {
+    //         // Store the image in the custom 'public' disk path
+    //         //$this->image->storeAs('user', $this->image->getClientOriginalName(), 'public');
+    //         $this->image->storeAs('uploads/user', $this->image->getClientOriginalName(), 'public');
+    //     }
+
     // Reset form fields
     public function resetFields()
     {

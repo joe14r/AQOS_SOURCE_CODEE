@@ -226,7 +226,10 @@ table tr:last-child td {
     font-size: 24px;
     color: #3498db;
 }
-
+table tbody tr td .btn {
+    padding: 5px;
+    line-height: 12px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
@@ -253,4 +256,2017 @@ form {
 }
 .hidden {
     display: none;
+}
+.col-md-12.mt-30 {
+    margin-top: 30px;
+}
+.col-md-12.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* Modern Admin Dashboard Styles */
+.modern-admin-dashboard-section {
+    padding: 40px 24px 32px 24px;
+    background: #f4f6fa;
+    min-height: 100vh;
+}
+
+.modern-admin-dashboard-metrics {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.modern-admin-dashboard-metric-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 36px 24px 36px;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.modern-admin-dashboard-metric-card:hover {
+    box-shadow: 0 6px 24px rgba(255,102,0,0.13);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.modern-admin-dashboard-metric-icon {
+    font-size: 2.2rem;
+    color: #ff6600;
+    margin-bottom: 12px;
+}
+
+.modern-admin-dashboard-metric-label {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.modern-admin-dashboard-metric-value {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #23272f;
+}
+
+.modern-admin-dashboard-chart-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 24px 24px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.modern-admin-dashboard-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.modern-admin-dashboard-tablinks {
+    background: #f4f6fa;
+    color: #23272f;
+    font-weight: 600;
+    font-size: 1.08rem;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+}
+.modern-admin-dashboard-tablinks.active, .modern-admin-dashboard-tablinks:hover {
+    background: #ff6600;
+    color: #fff;
+}
+
+.modern-admin-dashboard-tabcontent {
+    display: none;
+    padding: 18px 0 0 0;
+}
+.modern-admin-dashboard-tabcontent.active {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .modern-admin-dashboard-metrics {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .modern-admin-dashboard-metric-card {
+        min-width: unset;
+        max-width: unset;
+        padding: 18px 12px 12px 12px;
+    }
+    .modern-admin-dashboard-chart-card {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-dashboard-tabs {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .modern-admin-dashboard-tablinks {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
+
+/* Modern Admin User Management Styles */
+.modern-admin-user-manager {
+    padding: 32px 0;
+}
+
+.modern-admin-alert-success {
+    background: #e8f5e9;
+    color: #27ae60;
+    border-radius: 8px;
+    padding: 14px 24px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.07);
+}
+
+.modern-admin-user-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 480px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+}
+
+.modern-admin-user-card-header {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+.modern-admin-user-card-body {
+    padding: 24px 24px 18px 24px;
+}
+
+.modern-admin-user-form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-admin-user-input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.modern-admin-user-error {
+    color: #ff3300;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.modern-admin-user-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-top: 8px;
+}
+
+.modern-admin-user-list {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 24px 24px;
+}
+
+.modern-admin-user-list-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6600;
+    margin-bottom: 18px;
+}
+
+.modern-admin-user-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.modern-admin-user-table th, .modern-admin-user-table td {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modern-admin-user-table th {
+    background: #ff6600;
+    color: #fff;
+    font-weight: 700;
+}
+
+.modern-admin-user-table tr:nth-child(even) {
+    background: #f4f6fa;
+}
+
+.modern-admin-user-action-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.modern-admin-user-edit {
+    background: #ffe0b2;
+    color: #ff6600;
+}
+.modern-admin-user-edit:hover {
+    background: #ffb74d;
+    color: #fff;
+}
+.modern-admin-user-delete {
+    background: #ffebee;
+    color: #ff3300;
+}
+.modern-admin-user-delete:hover {
+    background: #ff3300;
+    color: #fff;
+}
+
+.modern-admin-user-pagination {
+    margin-top: 18px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .modern-admin-user-card, .modern-admin-user-list {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-user-table th, .modern-admin-user-table td {
+        padding: 8px 2px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Compact User Form and Icon Action Buttons */
+.modern-admin-user-card.compact {
+    max-width: 700px;
+    margin: 0 auto 36px auto;
+}
+.modern-admin-user-form.compact {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.modern-admin-user-form-row {
+    display: flex;
+    gap: 24px;
+}
+@media (max-width: 900px) {
+    .modern-admin-user-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.modern-admin-user-action-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 1.1rem;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.modern-admin-user-edit {
+    background: #ffe0b2;
+    color: #ff6600;
+}
+.modern-admin-user-edit:hover {
+    background: #ffb74d;
+    color: #fff;
+    transform: scale(1.08);
+}
+.modern-admin-user-delete {
+    background: #ffebee;
+    color: #ff3300;
+}
+.modern-admin-user-delete:hover {
+    background: #ff3300;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Modern Admin Role Management Styles */
+.modern-admin-role-manager {
+    padding: 32px 0;
+}
+
+.modern-admin-role-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 480px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+}
+
+.modern-admin-role-card-header {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+.modern-admin-role-card-body {
+    padding: 24px 24px 18px 24px;
+}
+
+.modern-admin-role-form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-admin-role-input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.modern-admin-role-error {
+    color: #ff3300;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.modern-admin-role-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-top: 8px;
+}
+
+.modern-admin-role-list {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 24px 24px;
+}
+
+.modern-admin-role-list-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6600;
+    margin-bottom: 18px;
+}
+
+.modern-admin-role-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.modern-admin-role-table th, .modern-admin-role-table td {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modern-admin-role-table th {
+    background: #ff6600;
+    color: #fff;
+    font-weight: 700;
+}
+
+.modern-admin-role-table tr:nth-child(even) {
+    background: #f4f6fa;
+}
+
+.modern-admin-role-action-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 1.1rem;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.modern-admin-role-edit {
+    background: #ffe0b2;
+    color: #ff6600;
+}
+.modern-admin-role-edit:hover {
+    background: #ffb74d;
+    color: #fff;
+    transform: scale(1.08);
+}
+.modern-admin-role-delete {
+    background: #ffebee;
+    color: #ff3300;
+}
+.modern-admin-role-delete:hover {
+    background: #ff3300;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.modern-admin-role-pagination {
+    margin-top: 18px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .modern-admin-role-card, .modern-admin-role-list {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-role-table th, .modern-admin-role-table td {
+        padding: 8px 2px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Modern Admin Role Permissions Multi-Select */
+.modern-admin-role-input[multiple] {
+    min-height: 120px;
+    max-height: 220px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #888;
+    font-size: 1rem;
+    background: #fff;
+    resize: vertical;
+    overflow-y: auto;
+}
+.modern-admin-role-input[multiple]:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 0 2px #ff660033;
+}
+
+/* Modern Admin Table Management Styles */
+.modern-admin-table-manager {
+    padding: 32px 0;
+}
+
+.modern-admin-table-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 520px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+}
+
+.modern-admin-table-card-header {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+.modern-admin-table-card-body {
+    padding: 24px 24px 18px 24px;
+}
+
+.modern-admin-table-form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-admin-table-input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.modern-admin-table-input-file {
+    padding: 6px 0;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.modern-admin-table-img-preview {
+    margin-top: 10px;
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.modern-admin-table-error {
+    color: #ff3300;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.modern-admin-table-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-top: 8px;
+}
+
+.modern-admin-table-list {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 24px 24px;
+}
+
+.modern-admin-table-list-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6600;
+    margin-bottom: 18px;
+}
+
+.modern-admin-table-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.modern-admin-table-table th, .modern-admin-table-table td {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modern-admin-table-table th {
+    background: #ff6600;
+    color: #fff;
+    font-weight: 700;
+}
+
+.modern-admin-table-table tr:nth-child(even) {
+    background: #f4f6fa;
+}
+
+.modern-admin-table-action-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 1.1rem;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.modern-admin-table-view {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+.modern-admin-table-view:hover {
+    background: #1976d2;
+    color: #fff;
+    transform: scale(1.08);
+}
+.modern-admin-table-edit {
+    background: #ffe0b2;
+    color: #ff6600;
+}
+.modern-admin-table-edit:hover {
+    background: #ffb74d;
+    color: #fff;
+    transform: scale(1.08);
+}
+.modern-admin-table-delete {
+    background: #ffebee;
+    color: #ff3300;
+}
+.modern-admin-table-delete:hover {
+    background: #ff3300;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.modern-admin-table-pagination {
+    margin-top: 18px;
+    text-align: center;
+}
+
+/* Modal Styles */
+.modern-admin-table-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modern-admin-table-modal {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    max-width: 480px;
+    width: 100%;
+    padding: 0;
+    animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.modern-admin-table-modal-header {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modern-admin-table-modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 12px;
+}
+.modern-admin-table-modal-body {
+    padding: 24px 24px 12px 24px;
+}
+.modern-admin-table-modal-footer {
+    padding: 12px 24px 18px 24px;
+    text-align: right;
+}
+.modern-admin-table-modal-close-btn {
+    min-width: 100px;
+}
+
+@media (max-width: 900px) {
+    .modern-admin-table-card, .modern-admin-table-list {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-table-table th, .modern-admin-table-table td {
+        padding: 8px 2px;
+        font-size: 0.95rem;
+    }
+    .modern-admin-table-modal {
+        max-width: 98vw;
+    }
+}
+
+/* Modern Admin Menu Management Styles */
+.modern-admin-menu-manager {
+    padding: 32px 0;
+}
+
+.modern-admin-menu-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 520px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+}
+
+.modern-admin-menu-card-header {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+.modern-admin-menu-card-body {
+    padding: 24px 24px 18px 24px;
+}
+
+.modern-admin-menu-form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-admin-menu-input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.modern-admin-menu-input-file {
+    padding: 6px 0;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.modern-admin-menu-img-preview {
+    margin-top: 10px;
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.modern-admin-menu-error {
+    color: #ff3300;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.modern-admin-menu-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-top: 8px;
+}
+
+.modern-admin-menu-list {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 24px 24px;
+}
+
+.modern-admin-menu-list-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6600;
+    margin-bottom: 18px;
+}
+
+.modern-admin-menu-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.modern-admin-menu-table th, .modern-admin-menu-table td {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modern-admin-menu-table th {
+    background: #ff6600;
+    color: #fff;
+    font-weight: 700;
+}
+
+.modern-admin-menu-table tr:nth-child(even) {
+    background: #f4f6fa;
+}
+
+.modern-admin-menu-action-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 1.1rem;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.modern-admin-menu-edit {
+    background: #ffe0b2;
+    color: #ff6600;
+}
+.modern-admin-menu-edit:hover {
+    background: #ffb74d;
+    color: #fff;
+    transform: scale(1.08);
+}
+.modern-admin-menu-delete {
+    background: #ffebee;
+    color: #ff3300;
+}
+.modern-admin-menu-delete:hover {
+    background: #ff3300;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.modern-admin-menu-pagination {
+    margin-top: 18px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .modern-admin-menu-card, .modern-admin-menu-list {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-menu-table th, .modern-admin-menu-table td {
+        padding: 8px 2px;
+        font-size: 0.95rem;
+    }
+}
+
+/* --- Modern Admin Menu Manager Redesign --- */
+.modern-admin-menu-card-modern {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    max-width: 600px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+    border: 1.5px solid #f4f6fa;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.modern-admin-menu-card-modern:hover {
+    box-shadow: 0 6px 24px rgba(255,102,0,0.13);
+    transform: translateY(-2px) scale(1.01);
+}
+.modern-admin-menu-card-header h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modern-admin-menu-form-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.modern-admin-menu-form-row {
+    display: flex;
+    gap: 24px;
+}
+@media (max-width: 900px) {
+    .modern-admin-menu-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+.modern-admin-menu-input-modern {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #ddd;
+    font-size: 1rem;
+    margin-top: 6px;
+    background: #f8f8f8;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.modern-admin-menu-input-modern:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 0 2px #ff660033;
+}
+.modern-admin-menu-input-file-modern {
+    padding: 6px 0;
+    font-size: 1rem;
+    margin-top: 6px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 1.5px solid #ddd;
+}
+.modern-admin-menu-img-preview-modern {
+    margin-top: 10px;
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border: 1.5px solid #ff6600;
+}
+.modern-admin-menu-btn-modern {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    margin-top: 18px;
+    background: linear-gradient(90deg, #ff6600 60%, #ff9900 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(255,102,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.modern-admin-menu-btn-modern:hover {
+    background: linear-gradient(90deg, #ff9900 60%, #ff6600 100%);
+    box-shadow: 0 4px 16px rgba(255,102,0,0.13);
+    transform: scale(1.03);
+}
+
+/* Action Buttons Modern Redesign */
+.modern-admin-menu-action-btn-modern {
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 1.15rem;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.modern-admin-menu-edit-modern {
+    background: #ffe0b2;
+    color: #ff6600;
+}
+.modern-admin-menu-edit-modern:hover {
+    background: #ffb74d;
+    color: #fff;
+    transform: scale(1.08);
+}
+.modern-admin-menu-delete-modern {
+    background: #ffebee;
+    color: #ff3300;
+}
+.modern-admin-menu-delete-modern:hover {
+    background: #ff3300;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Responsive tweaks for menu manager */
+@media (max-width: 900px) {
+    .modern-admin-menu-card-modern {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-menu-btn-modern {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+/* --- Modern Admin Transaction Report Styles --- */
+.modern-admin-transection-report {
+    padding: 32px 0;
+}
+
+.modern-admin-transection-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    max-width: 1200px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+    border: 1.5px solid #f4f6fa;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.modern-admin-transection-card-header {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+.modern-admin-transection-card-header h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.modern-admin-transection-download-btn {
+    background: linear-gradient(90deg, #ff6600 60%, #ff9900 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.08rem;
+    padding: 12px 28px;
+    box-shadow: 0 2px 8px rgba(255,102,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.modern-admin-transection-download-btn:hover {
+    background: linear-gradient(90deg, #ff9900 60%, #ff6600 100%);
+    box-shadow: 0 4px 16px rgba(255,102,0,0.13);
+    transform: scale(1.03);
+}
+
+.modern-admin-transection-card-body {
+    padding: 32px 24px 24px 24px;
+}
+
+.modern-admin-transection-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.modern-admin-transection-table th, .modern-admin-transection-table td {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.modern-admin-transection-table th {
+    background: #ff6600;
+    color: #fff;
+    font-weight: 700;
+}
+.modern-admin-transection-table tr:nth-child(even) {
+    background: #f4f6fa;
+}
+
+.modern-admin-transection-pagination {
+    margin-top: 18px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .modern-admin-transection-card {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-transection-card-body {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-transection-table th, .modern-admin-transection-table td {
+        padding: 8px 2px;
+        font-size: 0.95rem;
+    }
+    .modern-admin-transection-download-btn {
+        font-size: 1rem;
+        padding: 10px 10px;
+    }
+}
+
+/* --- Modern Admin Order Tracking Styles --- */
+.modern-admin-order-tracking {
+    padding: 32px 0;
+}
+
+.modern-admin-order-tracking-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    max-width: 1200px;
+    margin: 0 auto 36px auto;
+    padding: 0;
+    border: 1.5px solid #f4f6fa;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.modern-admin-order-tracking-card-header {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.modern-admin-order-tracking-card-header h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.modern-admin-order-tracking-card-body {
+    padding: 32px 24px 24px 24px;
+}
+
+.modern-admin-order-tracking-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.modern-admin-order-tracking-table th, .modern-admin-order-tracking-table td {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.modern-admin-order-tracking-table th {
+    background: #ff6600;
+    color: #fff;
+    font-weight: 700;
+}
+.modern-admin-order-tracking-table tr:nth-child(even) {
+    background: #f4f6fa;
+}
+
+.modern-admin-order-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin: 0 2px;
+    color: #fff;
+    background: #888;
+    min-width: 80px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.modern-admin-order-badge-payment {
+    background: #1976d2;
+}
+.modern-admin-order-badge-info {
+    background: #00bcd4;
+}
+.modern-admin-order-badge-success {
+    background: #43a047;
+}
+.modern-admin-order-badge-danger {
+    background: #e53935;
+}
+.modern-admin-order-badge-warning {
+    background: #ffa726;
+    color: #23272f;
+}
+.modern-admin-order-badge-primary {
+    background: #3949ab;
+}
+.modern-admin-order-badge-default {
+    background: #bdbdbd;
+    color: #23272f;
+}
+
+.modern-admin-order-action-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 1.15rem;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2fd;
+    color: #1976d2;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.modern-admin-order-action-btn:hover {
+    background: #1976d2;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.modern-admin-order-tracking-pagination {
+    margin-top: 18px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .modern-admin-order-tracking-card {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-order-tracking-card-body {
+        padding: 12px 2px 12px 2px;
+    }
+    .modern-admin-order-tracking-table th, .modern-admin-order-tracking-table td {
+        padding: 8px 2px;
+        font-size: 0.95rem;
+    }
+}
+
+/* --- Modern Admin Sidebar Styles --- */
+.modern-admin-sidebar {
+    width: 260px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    min-height: 100vh;
+    padding: 0 0 32px 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.modern-admin-sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0 18px 0;
+    border-bottom: 1.5px solid #34495e;
+    margin-bottom: 12px;
+}
+.modern-admin-sidebar-logo {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 8px;
+}
+.modern-admin-sidebar-header h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ecf0f1;
+    letter-spacing: 1px;
+}
+.modern-admin-sidebar-nav {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.modern-admin-sidebar-nav li {
+    width: 100%;
+}
+.modern-admin-sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.08rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 8px 0 0 8px;
+    transition: background 0.18s, color 0.18s, transform 0.18s;
+}
+.modern-admin-sidebar-nav a i {
+    font-size: 1.2rem;
+}
+.modern-admin-sidebar-nav a:hover, .modern-admin-sidebar-nav a.active {
+    background: #ff6600;
+    color: #fff;
+    transform: translateX(4px) scale(1.04);
+}
+.modern-admin-sidebar-divider {
+    height: 1.5px;
+    background: #34495e;
+    margin: 18px 24px 18px 24px;
+    border-radius: 2px;
+}
+.modern-admin-sidebar-logout-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+.modern-admin-sidebar-logout-btn {
+    background: #23272f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    padding: 12px 36px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, transform 0.18s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+.modern-admin-sidebar-logout-btn:hover {
+    background: #ff6600;
+    color: #fff;
+    transform: scale(1.04);
+}
+@media (max-width: 900px) {
+    .modern-admin-sidebar {
+        width: 100vw;
+        min-height: unset;
+        padding: 0 0 12px 0;
+    }
+    .modern-admin-sidebar-header {
+        padding: 18px 0 10px 0;
+    }
+    .modern-admin-sidebar-nav a {
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
+    .modern-admin-sidebar-logout-btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+}
+
+/* --- Modern Admin Login Styles --- */
+.modern-admin-login-bg {
+    background: #f4f6fa;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modern-admin-login-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modern-admin-login-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 48px 36px 36px 36px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid #f4f6fa;
+}
+.modern-admin-login-logo {
+    font-size: 2.8rem;
+    color: #ff6600;
+    margin-bottom: 12px;
+}
+.modern-admin-login-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.modern-admin-login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.modern-admin-login-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.modern-admin-login-input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #ddd;
+    font-size: 1.08rem;
+    background: #f8f8f8;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.modern-admin-login-input:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 0 2px #ff660033;
+}
+.modern-admin-login-btn {
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 14px 0;
+    margin-top: 8px;
+    background: linear-gradient(90deg, #ff6600 60%, #ff9900 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(255,102,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.modern-admin-login-btn:hover {
+    background: linear-gradient(90deg, #ff9900 60%, #ff6600 100%);
+    box-shadow: 0 4px 16px rgba(255,102,0,0.13);
+    transform: scale(1.03);
+}
+.modern-admin-login-error {
+    color: #e53935;
+    font-size: 0.98rem;
+    margin-top: 2px;
+    font-weight: 600;
+}
+@media (max-width: 600px) {
+    .modern-admin-login-card {
+        padding: 24px 6px 18px 6px;
+        max-width: 98vw;
+    }
+    .modern-admin-login-title {
+        font-size: 1.3rem;
+    }
+    .modern-admin-login-btn {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
+
+/* --- Modern User Cart & Pages Styles --- */
+.modern-cart-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 700px;
+    margin: 48px auto 36px auto;
+    padding: 40px 32px 32px 32px;
+    text-align: center;
+}
+.modern-cart-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 18px;
+}
+.modern-cart-empty {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+.modern-cart-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 18px;
+}
+.modern-cart-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.modern-cart-table th, .modern-cart-table td {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.modern-cart-table th {
+    background: #ff6600;
+    color: #fff;
+    font-weight: 700;
+}
+.modern-cart-table tr:nth-child(even) {
+    background: #f4f6fa;
+}
+.modern-cart-img {
+    width: 60px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.modern-cart-qty {
+    width: 60px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1.5px solid #ddd;
+    font-size: 1rem;
+    text-align: center;
+}
+.modern-cart-remove {
+    background: #ffebee;
+    color: #ff3300;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.modern-cart-remove:hover {
+    background: #ff3300;
+    color: #fff;
+    transform: scale(1.08);
+}
+.modern-cart-summary {
+    margin-top: 24px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 18px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.modern-btn {
+    background: linear-gradient(90deg, #ff6600 60%, #ff9900 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.08rem;
+    padding: 12px 28px;
+    box-shadow: 0 2px 8px rgba(255,102,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+    text-decoration: none;
+}
+.modern-btn:hover {
+    background: linear-gradient(90deg, #ff9900 60%, #ff6600 100%);
+    box-shadow: 0 4px 16px rgba(255,102,0,0.13);
+    transform: scale(1.03);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Modern Menu Page */
+.modern-menu-hero {
+    text-align: center;
+    margin: 48px 0 24px 0;
+}
+.modern-menu-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 8px;
+}
+.modern-menu-subtitle {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+.modern-menu-section {
+    margin-bottom: 36px;
+}
+.modern-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.modern-menu-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    width: 260px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.modern-menu-card:hover {
+    box-shadow: 0 6px 24px rgba(255,102,0,0.13);
+    transform: translateY(-4px) scale(1.03);
+}
+.modern-menu-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.modern-menu-content {
+    padding: 18px 12px 18px 12px;
+    text-align: center;
+}
+.modern-menu-item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 6px;
+}
+.modern-menu-price {
+    font-size: 1.1rem;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+.modern-menu-warning {
+    color: #e53935;
+    font-size: 1.1rem;
+    margin: 32px 0;
+}
+
+/* Modern Checkout Page */
+.modern-checkout-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 700px;
+    margin: 48px auto 36px auto;
+    padding: 40px 32px 32px 32px;
+    text-align: center;
+}
+.modern-checkout-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 18px;
+}
+.modern-checkout-form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+.modern-checkout-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+.modern-checkout-input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #ddd;
+    font-size: 1rem;
+    margin-top: 6px;
+    background: #f8f8f8;
+    transition: border 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+.modern-checkout-input:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 0 2px #ff660033;
+}
+.modern-checkout-radio-group {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+}
+.modern-checkout-radio {
+    font-size: 1rem;
+    color: #23272f;
+    margin-right: 18px;
+}
+.modern-checkout-btn {
+    margin-top: 18px;
+}
+.modern-checkout-error {
+    color: #e53935;
+    font-size: 0.98rem;
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+/* Modern Feedback Page */
+.modern-feedback-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 700px;
+    margin: 48px auto 36px auto;
+    padding: 40px 32px 32px 32px;
+    text-align: center;
+}
+.modern-feedback-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 18px;
+}
+.modern-feedback-form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+.modern-feedback-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+.modern-feedback-input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #ddd;
+    font-size: 1rem;
+    margin-top: 6px;
+    background: #f8f8f8;
+    transition: border 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+.modern-feedback-input:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 0 2px #ff660033;
+}
+.modern-feedback-btn {
+    margin-top: 18px;
+}
+.modern-feedback-error {
+    color: #e53935;
+    font-size: 0.98rem;
+    margin-top: 2px;
+    font-weight: 600;
+}
+.modern-feedback-success {
+    background: #e8f5e9;
+    color: #27ae60;
+    border-radius: 8px;
+    padding: 14px 24px;
+    margin-top: 18px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.07);
+}
+
+/* Modern Order Tracking Page */
+.modern-tracking-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 700px;
+    margin: 48px auto 36px auto;
+    padding: 40px 32px 32px 32px;
+    text-align: center;
+}
+.modern-tracking-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 18px;
+}
+.modern-tracking-status-card {
+    margin-top: 24px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 18px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.modern-tracking-label {
+    color: #ff6600;
+    font-weight: 700;
+}
+.modern-tracking-status {
+    color: #3949ab;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.modern-tracking-estimate {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+.modern-tracking-btn {
+    margin: 0 8px;
+}
+@media (max-width: 900px) {
+    .modern-cart-section, .modern-checkout-section, .modern-feedback-section, .modern-tracking-section {
+        padding: 18px 4px 18px 4px;
+        max-width: 98vw;
+    }
+    .modern-cart-title, .modern-checkout-title, .modern-feedback-title, .modern-tracking-title {
+        font-size: 1.3rem;
+    }
+    .modern-btn {
+        font-size: 1rem;
+        padding: 10px 10px;
+    }
+}
+
+/* --- Modern User Header Styles --- */
+.modern-user-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-bottom: 2px solid #ff6600;
+    padding: 0;
+}
+.modern-user-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 72px;
+}
+.modern-user-header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 2rem;
+    color: #ff6600;
+    font-weight: 700;
+}
+.modern-user-header-title {
+    color: #23272f;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.modern-user-header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.modern-user-header-menu {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.modern-user-header-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #23272f;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 24px;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+.modern-user-header-btn:hover, .modern-user-header-btn.active {
+    background: #ff6600;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255,102,0,0.08);
+}
+.modern-user-header-cart-count {
+    background: #ff6600;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.85em;
+    padding: 2px 7px;
+    margin-left: 4px;
+    font-weight: 700;
+    min-width: 22px;
+    display: inline-block;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .modern-user-header-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 8px;
+        gap: 8px;
+    }
+    .modern-user-header-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* --- Modern User Footer Styles --- */
+.modern-user-footer {
+    background: #fff;
+    border-top: 2px solid #ff6600;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+    padding: 0;
+    margin-top: 48px;
+}
+.modern-user-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 32px 18px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.modern-user-footer-social {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 6px;
+}
+.modern-user-footer-social a {
+    color: #ff6600;
+    font-size: 1.3rem;
+    transition: color 0.18s, transform 0.18s;
+}
+.modern-user-footer-social a:hover {
+    color: #23272f;
+    transform: scale(1.15);
+}
+.modern-user-footer-copyright {
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .modern-user-footer-inner {
+        padding: 18px 8px 12px 8px;
+    }
+}
+
+/* --- Organized Modern Checkout Form --- */
+.modern-checkout-form-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 500px;
+    margin: 32px auto 0 auto;
+    padding: 36px 32px 28px 32px;
+    border: 1.5px solid #f4f6fa;
+}
+.modern-checkout-form-organized {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.modern-checkout-form-section {
+    margin-bottom: 0;
+}
+.modern-checkout-form-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.modern-checkout-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.modern-checkout-radio-row {
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+.modern-checkout-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.modern-checkout-radio input[type="radio"] {
+    margin-right: 6px;
+}
+.modern-checkout-radio i {
+    color: #ff6600;
+    font-size: 1.1rem;
+    margin-right: 4px;
+}
+@media (max-width: 600px) {
+    .modern-checkout-form-card {
+        padding: 18px 8px 12px 8px;
+    }
+    .modern-checkout-form-title {
+        font-size: 1rem;
+    }
+    .modern-checkout-radio-row {
+        flex-direction: column;
+        gap: 12px;
+    }
 }

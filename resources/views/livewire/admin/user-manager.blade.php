@@ -1,60 +1,52 @@
-<div>
+<div class="modern-admin-user-manager">
     <!-- Flash message -->
     @if (session()->has('message'))
-        <div class="alert alert-success">
+        <div class="modern-admin-alert-success">
             {{ session('message') }}
         </div>
     @endif
 
     <!-- Add/Edit User Form -->
-    <div class="card">
-        <div class="card-header">
-            @if($isEditing)
-                <h4>Edit User</h4>
-            @else
-                <h4>Add User</h4>
-            @endif
+    <div class="modern-admin-user-card compact">
+        <div class="modern-admin-user-card-header">
+            <h3>{{ $isEditing ? 'Edit User' : 'Add User' }}</h3>
         </div>
-        <div class="card-body">
-            <form wire:submit.prevent="{{ $isEditing ? 'update' : 'store' }}">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" wire:model="name" id="name" class="form-control" placeholder="User Name">
-                    @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+        <div class="modern-admin-user-card-body">
+            <form wire:submit.prevent="{{ $isEditing ? 'update' : 'store' }}" class="modern-admin-user-form compact">
+                <div class="modern-admin-user-form-row">
+                    <div class="modern-admin-user-form-group">
+                        <label for="name">Name</label>
+                        <input type="text" wire:model="name" id="name" class="modern-admin-user-input" placeholder="User Name">
+                        @error('name') <span class="modern-admin-user-error">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="modern-admin-user-form-group">
+                        <label for="email">Email</label>
+                        <input type="email" wire:model="email" id="email" class="modern-admin-user-input" placeholder="User Email">
+                        @error('email') <span class="modern-admin-user-error">{{ $message }}</span> @enderror
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" wire:model="email" id="email" class="form-control" placeholder="User Email">
-                    @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                <div class="modern-admin-user-form-row">
+                    <div class="modern-admin-user-form-group">
+                        <label for="password">Password</label>
+                        <input type="password" wire:model="password" id="password" class="modern-admin-user-input" placeholder="Password">
+                        @error('password') <span class="modern-admin-user-error">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="modern-admin-user-form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" wire:model="confirm_password" id="confirm_password" class="modern-admin-user-input" placeholder="Confirm Password">
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" wire:model="password" id="password" class="form-control" placeholder="Password">
-                    @error('password') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-
-                <div class="form-group">
-                    <label for="confirm_password">Confirm Password</label>
-                    <input type="password" wire:model="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password">
-                </div>
-
-                <div class="form-group">
+                <div class="modern-admin-user-form-group">
                     <label for="roles">Roles</label>
-                    @php
-//dd($user_roles);
-                    @endphp
-                    <select wire:model="roles" id="roles" class="form-control" multiple>
+                    <select wire:model="roles" id="roles" class="modern-admin-user-input" multiple>
                         <option value="">Select Role</option>
                         @foreach($user_roles as $value => $label)
                         <option value="{{ $value }}">{{ $value }}</option>
                         @endforeach
                     </select>
-                    @error('roles') <span class="text-danger">{{ $message }}</span> @enderror
+                    @error('roles') <span class="modern-admin-user-error">{{ $message }}</span> @enderror
                 </div>
-
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="modern-btn modern-admin-user-btn">
                     {{ $isEditing ? 'Update User' : 'Add User' }}
                 </button>
             </form>
@@ -62,9 +54,9 @@
     </div>
 
     <!-- User List -->
-    <div class="mt-4">
-        <h4>Users</h4>
-        <table class="table table-bordered">
+    <div class="modern-admin-user-list">
+        <h3 class="modern-admin-user-list-title">Users</h3>
+        <table class="modern-admin-user-table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -80,27 +72,21 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ implode(', ', $user->roles->pluck('name')->toArray()) }}</td>
                         <td>
-                            <!-- Edit Button -->
-                            <button wire:click="edit({{ $user->id }})" class="btn btn-warning btn-sm">Edit</button>
-                            <!-- Delete Button with Confirmation -->
-                            <button onclick="confirmDelete({{ $user->id }})" class="btn btn-danger btn-sm">Delete</button>
+                            <button wire:click="edit({{ $user->id }})" class="modern-admin-user-action-btn modern-admin-user-edit" title="Edit"><i class="fas fa-pen"></i></button>
+                            <button onclick="confirmDelete({{ $user->id }})" class="modern-admin-user-action-btn modern-admin-user-delete" title="Delete"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-
-        <!-- Pagination -->
-        <div>
+        <div class="modern-admin-user-pagination">
             {{ $users->links() }}
         </div>
     </div>
 
-    <!-- JavaScript for Delete Confirmation -->
     <script>
         function confirmDelete(userId) {
             if (confirm("Are you sure you want to delete this user?")) {
-                // If user confirms, trigger Livewire delete method
                 @this.call('delete', userId);
             }
         }

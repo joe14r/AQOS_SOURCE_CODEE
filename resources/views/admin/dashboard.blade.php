@@ -14,4 +14,14 @@
         <p>5</p>
     </div>
 </section>
+<section class="chart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            </div>
+        </div>
+    </div>
+    
+</section>
 @endsection
